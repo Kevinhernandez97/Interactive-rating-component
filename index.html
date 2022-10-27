@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main class="main__container">
+        <section class="main__container-rating">
+            <div class="main__container-rating-img">
+                <img src="./assets/icon-star.svg" alt="imagen de una estrella">
+            </div>
+            <div class="main__container-rating-description">
+                <h2>How did we do?</h2>
+                <p>Please let us know how we did with your support request. All feedback is appreciated yo help us improve our offering!</p>
+            </div>
+            <div class="main__container-rating-list">
+                <form class="main__container-rating-form" action="">
+                    <input type="radio" id="radio1" name="clasificacion" value="1">
+                    <label for="radio1" name="clasificacion" value="1">1</label>
+                    <input type="radio" id="radio2" name="clasificacion" value="2">
+                    <label for="radio2">2</label>
+                    <input type="radio" id="radio3" name="clasificacion" value="3">
+                    <label for="radio3">3</label>
+                    <input type="radio" id="radio4" name="clasificacion" value="4">
+                    <label for="radio4">4</label>
+                    <input type="radio" id="radio5" name="clasificacion" value="5">
+                    <label for="radio5">5</label>
+                </form>
+            </div>
+            <button class="main__container-rating-button">SUBMIT</button>
+        </section>
+        <section class="main__container-selection inactive">
+            <div class="main__container-content">
+                <img src="./assets/illustration-thank-you.svg" alt="imagen de un celular">
+                <div class="main__container-content-selected">
+                    <p>You selected <span class="main__container-content-span"></span>out of 5</p>
+                </div>
+                <h2>Thank you!</h2>
+                <p>We appreciate you taking the time to give a rating. if you ever need more support, dont´t hesitate to get in touch!</p>
+            </div>
+        </section>
+    </main>
+<script src="./main.js"></script>  
+</body>
+</html>
