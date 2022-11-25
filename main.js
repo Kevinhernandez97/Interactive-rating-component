@@ -8,43 +8,25 @@ const radioCinco = document.querySelector('#radio5');
 const submitButton = document.querySelector('.main__container-rating-button');
 const contentSpan = document.querySelector('.main__container-content-span');
 
-function checkRating () {
-    if (radioUno.checked) {
-        inactiveScreen();
-        addSpan();
-    } else if (radioDos.checked) {
-        inactiveScreen();
-        addSpan();
-    } else if (radioTres.checked) {
-        inactiveScreen();
-        addSpan();
-    } else if (radioCuatro.checked) {
-        inactiveScreen();
-        addSpan();
-    } else if (radioCinco.checked) {
-        inactiveScreen();
-        addSpan();
-    } else {
-    }
+const checkRating = () => {
+    radioUno.checked ? (inactiveScreen(), addSpan()) : 
+    radioDos.checked ? (inactiveScreen(), addSpan()) : 
+    radioTres.checked ? (inactiveScreen(), addSpan()) : 
+    radioCuatro.checked ? (inactiveScreen(), addSpan()) : 
+    radioCinco.checked ? (inactiveScreen(), addSpan()) : '';
 }
-
 submitButton.addEventListener('click', checkRating);
 
-function inactiveScreen () {
-    sectionRating.classList.add('inactive');
-    sectionSelection.classList.remove('inactive');
+
+const inactiveScreen = () => {
+sectionRating.classList.add('inactive'); 
+sectionSelection.classList.remove('inactive');
 }
 
-function addSpan () {
-    if (radioUno.checked) {
-        contentSpan.textContent = '1 '
-    } else if (radioDos.checked) {
-        contentSpan.textContent = '2 '
-    } else if (radioTres.checked) {
-        contentSpan.textContent = '3 '
-    } else if (radioCuatro.checked) {
-        contentSpan.textContent = '4 '
-    } else if (radioCinco.checked) {
-        contentSpan.textContent = '5 '
-    }
+const addSpan = () => {
+    radioUno.checked ? contentSpan.textContent = '1 ' :
+    radioDos.checked ? contentSpan.textContent = '2 ' :
+    radioTres.checked ? contentSpan.textContent = '3 ' :
+    radioCuatro.checked ? contentSpan.textContent = '4 ' :
+    radioCinco.checked ? contentSpan.textContent = '5 ' : '';
 }
